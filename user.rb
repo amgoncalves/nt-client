@@ -10,7 +10,7 @@ class User
   def find_by_handle(handle)
     return nil unless handle != nil
     request = Typhoeus::Request.new(
-      "#{@NT.base_uri}/api/v2/#{@NT.api_token}/user/#{handle}",
+      "#{@NT.base_uri}/api/v2/#{@NT.api_token}/users/#{handle}",
       method: :get,
       params: { input_type: "handle" }
     )
@@ -29,7 +29,7 @@ class User
   def find_by_id(id)
     return nil unless id != nil
     request = Typhoeus::Request.new(
-      "#{@NT.base_uri}/api/v2/#{@NT.api_token}/user/#{id}",
+      "#{@NT.base_uri}/api/v2/#{@NT.api_token}/users/#{id}",
       method: :get,
       params: { input_type: "id" }
     )
