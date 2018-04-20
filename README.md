@@ -5,8 +5,8 @@
 ## Example
 
 ```
-api_key = $NT_API_KEY
-nT = NanoTwitter.new(api_key)
+api_token = ENV['NT_ACCESS_TOKEN']
+nT = NanoTwitter.new(api_token)
 user_handle = "mcurie"
 hash = nT.find_user_by_handle(user_handle)
 puts "#{user_handle}'s email is: #{hash["email"]}"
