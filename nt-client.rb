@@ -9,12 +9,10 @@ user_handle = "mcurie"
 user_id = "5acd336c31d664274e814839"
 tweet_id = "5ad9dd4fea73c95e24de8f0d"
 
-hash = nT.user.find_by_id(user_id)
-hash = nT.user.find_by_handle(user_handle)
+hash = nT.user.find("id", user_id)
 tweet_h = nT.tweet.find_by_id(tweet_id)
 recent_tweets = nT.tweet.find_most_recent()
 mc_recent = nT.user.get_tweets("handle", user_handle)
-
 
 def pretty_print(tweets)
   tweets.each do |num, tweet|
