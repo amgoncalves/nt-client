@@ -2,15 +2,17 @@
 
 [nanoTwitter (nT)](https://github.com/amgoncalves/sassy-twitter) is a minimal version of [Twitter](https://twitter.com/) built on [Sinatra](http://sinatrarb.com/).  This client library provides tools to interface with the nanoTwitter API.
 
-## Example
+## Routes
 
-```
-api_token = ENV['NT_ACCESS_TOKEN']
-nT = NanoTwitter.new(api_token)
-user_handle = "mcurie"
-hash = nT.user.find_by_handle(user_handle)
-puts "#{user_handle}'s email is: #{hash["email"]}"
-```
+Tweet
+
+GET "/api/v1/:apitoken/tweets/:id"
+POST "/api/v1/:apitoken/tweets/new"
+
+User
+
+GET "/api/v1/:apitoken/users/:key"
+GET "/api/v1/:apitoken/users/:key/tweets"
 
 ## Authors
 
