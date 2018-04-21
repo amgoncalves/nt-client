@@ -39,11 +39,4 @@ class Tweet
 
     request.run 
   end
-
-
-  def pretty_print(tweets)
-    tweets.each do |num, tweet|
-      puts "#{num}: #{tweet["author_handle"]} tweeted: \"#{tweet["content"]}\" on #{tweet["time_created"]}"    
-    end
-  end
 end
