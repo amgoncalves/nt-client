@@ -10,7 +10,7 @@ class Tweet
   def find_by_id(id)
     return nil unless id != nil
     request = Typhoeus::Request.new(
-      "#{@NT.base_uri}/api/v2/#{@NT.api_token}/tweets/#{id}",
+      "#{@NT.base_uri}/api/v1/#{@NT.api_token}/tweets/#{id}",
       method: :get
     )
     request.on_complete do |response|
@@ -26,7 +26,7 @@ class Tweet
 
   def find_most_recent
     request = Typhoeus::Request.new(
-      "#{@NT.base_uri}/api/v2/#{@NT.api_token}/tweets/recent",
+      "#{@NT.base_uri}/api/v1/#{@NT.api_token}/tweets/recent",
       method: :get
     )
     request.on_complete do |response|
@@ -37,6 +37,13 @@ class Tweet
       end
     end
 
-    request.run      
+    request.run 
+  end
+
+
+  def pretty_print(tweets)
+    tweets.each do |num, tweet|
+      puts "#{num}: #{tweet["author_handle"]} tweeted: \"#{tweet["content"]}\" on #{tweet["time_created"]}"    
+    end
   end
 end

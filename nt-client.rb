@@ -13,14 +13,9 @@ hash = nT.user.find_by_id(user_id)
 hash = nT.user.find_by_handle(user_handle)
 tweet_h = nT.tweet.find_by_id(tweet_id)
 recent_tweets = nT.tweet.find_most_recent()
-
-def print_tweets(tweets)
-  tweets.each do |num, tweet|
-    puts "#{num}: #{tweet["author_handle"]} tweeted: \"#{tweet["content"]}\" on #{tweet["time_created"]}"    
-  end
-end
+mc_recent = nT.user.get_tweets("handle", user_handle)
 
 puts "#{hash["handle"]}'s email is: #{hash["email"]}" unless hash == nil
 puts "#{tweet_h["author_handle"]} tweeted: \"#{tweet_h["content"]}\" on #{tweet_h["time_created"]}" unless tweet_h == nil
-print_tweets(recent_tweets)
-
+nT.tweet.pretty_print(recent_tweets)
+nT.tweet.pretty_print(mc_recent)
