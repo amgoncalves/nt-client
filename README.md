@@ -25,12 +25,18 @@ POST "/api/v1/:apitoken/users/:key/follow"
 POST "/api/v1/:apitoken/users/:key/unfollow"
 ```
 
+Search:
+
+```
+POST "/api/v1/:apitoken/search/:key/users"
+POST "/api/v1/:apitoken/search/:key/tweets"
+
+```
+
 TODO:
 
 ```
-POST "/api/v1/:apitoken/search/users/:key"
-POST "/api/v1/:apitoken/search/tweets/:key"
-POST "/api/v1/:apitoken/users/:key/edit"
+POST "/api/v1/:apitoken/users/:key/update"
 ```
 
 ## Authors

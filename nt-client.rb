@@ -30,8 +30,6 @@ def pretty_print(tweets)
   end
 end
 
-
-
 #puts nT.tweet("Hello, world!")
 #puts nT.reply("5acd33a131d664274e81485f", "It's a reply :D.")
 #puts nT.retweet("5acd33a131d664274e81485f", "It's a retweet :D.")
@@ -39,5 +37,8 @@ end
 #pretty_print(user_recent)
 
 #puts nT.get_followers(user_id)
-puts nT.unfollow(user_id2)
-puts nT.get_followers(user_id2)
+#puts nT.unfollow(user_id2)
+#puts nT.get_followers(user_id2)
+
+#puts nT.find_users("curie")
+puts nT.find_tweets("ipsum")

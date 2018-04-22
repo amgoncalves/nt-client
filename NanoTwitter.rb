@@ -59,4 +59,12 @@ class NanoTwitter
   def unfollow(id)
     @user.unfollow(id)
   end
+
+  def find_users(keyword)
+    @user.search(keyword)
+  end
+
+  def find_tweets(keyword)
+    @tweet.search(keyword)
+  end
 end
