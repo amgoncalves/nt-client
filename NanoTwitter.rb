@@ -28,19 +28,32 @@ class NanoTwitter
     @tweet.tweet(msg)
   end
 
-  def reply(id, msg)
-    @tweet.reply(id, msg)
+  def reply(tweet_id, msg)
+    @tweet.reply(tweet_id, msg)
   end
 
-  def retweet(id, msg)
-    @tweet.retweet(id, msg)
+  def retweet(tweet_id, msg)
+    @tweet.retweet(tweet_id, msg)
   end
 
-  def get_user(type, key)
-    @user.find(type, key)
+  def get_user(key_type, key)
+    @user.find(key_type, key)
   end
 
-  def get_user_tweets(type, key)
-    @user.get_tweets(type, key)
+  def get_user_tweets(key_type, key)
+    @user.get_tweets(key_type, key)
+  end
+
+  def get_followers(id)
+    @user.get_followers(id)
+  end
+
+  def get_following(id)
+  end
+
+  def follow(id)
+  end
+
+  def unfollow(id)
   end
 end

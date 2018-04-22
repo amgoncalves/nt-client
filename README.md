@@ -16,6 +16,13 @@ User
 
 GET "/api/v1/:apitoken/users/:key"
 GET "/api/v1/:apitoken/users/:key/tweets"
+GET "/api/v1/:apitoken/users/:key/followers"
+
+TODO:
+GET "/api/v1/:apitoken/users/:key/following"
+POST "/api/v1/:apitoken/users/:key/follow"
+POST "/api/v1/:apitoken/users/:key/unfollow"
+POST "/api/v1/:apitoken/users/:key/edit"
 
 ## Authors
 

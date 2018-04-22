@@ -42,4 +42,29 @@ class User
 
     request.run
   end
+
+  def get_followers(id)
+    request = Typhoeus::Request.new(
+      "#{@NT.base_uri}/api/v1/#{@NT.api_token}/users/#{id}/followers",
+      method: :get
+    )
+    request.on_complete do |response|
+      if response.success?
+        return JSON.parse(response.body)
+      else
+        return nil
+      end
+    end
+
+    request.run
+  end
+
+  def get_following(id)
+  end
+
+  def follow(id)
+  end
+
+  def unfollow(id)
+  end
 end
