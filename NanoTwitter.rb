@@ -53,8 +53,10 @@ class NanoTwitter
   end
 
   def follow(id)
+    @user.follow(id)
   end
 
   def unfollow(id)
+    @user.unfollow(id)
   end
 end

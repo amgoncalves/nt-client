@@ -6,8 +6,8 @@ api_key = ENV['NT_ACCESS_TOKEN']
 nT = NanoTwitter.new(api_key)
 
 user_handle = "mcurie"
-user_id = "5acd336c31d664274e814839"
-user_id2 = "5ace46f331d6643caa208479"
+user_id = "5acd336c31d664274e814839" #mcurie
+user_id2 = "5ace46f331d6643caa208479" #tlockheart
 tweet_id = "5ad9dd4fea73c95e24de8f0d"
 
 =begin
@@ -38,5 +38,6 @@ end
 #user_recent = nT.get_user_tweets("handle", "mcurie")
 #pretty_print(user_recent)
 
-puts nT.get_followers(user_id)
-puts nT.get_following(user_id2)
+#puts nT.get_followers(user_id)
+puts nT.unfollow(user_id2)
+puts nT.get_followers(user_id2)

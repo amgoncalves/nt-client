@@ -18,11 +18,13 @@ GET "/api/v1/:apitoken/users/:key"
 GET "/api/v1/:apitoken/users/:key/tweets"
 GET "/api/v1/:apitoken/users/:key/followers"
 GET "/api/v1/:apitoken/users/:key/following"
-
-TODO:
 POST "/api/v1/:apitoken/users/:key/follow"
 POST "/api/v1/:apitoken/users/:key/unfollow"
+
+TODO:
 POST "/api/v1/:apitoken/users/:key/edit"
+POST "/api/v1/:apitoken/search/users/:key"
+POST "/api/v1/:apitoken/search/tweets/:key"
 
 ## Authors
 
