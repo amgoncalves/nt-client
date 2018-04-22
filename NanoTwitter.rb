@@ -49,6 +49,7 @@ class NanoTwitter
   end
 
   def get_following(id)
+    @user.get_following(id)
   end
 
   def follow(id)

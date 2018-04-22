@@ -7,6 +7,7 @@ nT = NanoTwitter.new(api_key)
 
 user_handle = "mcurie"
 user_id = "5acd336c31d664274e814839"
+user_id2 = "5ace46f331d6643caa208479"
 tweet_id = "5ad9dd4fea73c95e24de8f0d"
 
 =begin
@@ -38,3 +39,4 @@ end
 #pretty_print(user_recent)
 
 puts nT.get_followers(user_id)
+puts nT.get_following(user_id2)
