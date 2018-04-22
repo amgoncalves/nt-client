@@ -9,6 +9,7 @@ Tweet
 GET "/api/v1/:apitoken/tweets/:id"
 GET "/api/v1/:apitoken/tweets/recent"
 POST "/api/v1/:apitoken/tweets/new"
+POST "/api/v1/:apitoken/tweets/:id/reply"
 
 User
 

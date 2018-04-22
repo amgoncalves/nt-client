@@ -2,8 +2,7 @@
 require './NanoTwitter.rb'
 require 'byebug'
 
-#api_key = ENV['NT_ACCESS_TOKEN']
-api_key = "blah"
+api_key = ENV['NT_ACCESS_TOKEN']
 nT = NanoTwitter.new(api_key)
 
 user_handle = "mcurie"
@@ -31,7 +30,8 @@ def pretty_print(tweets)
 end
 
 
-#user_recent = nT.get_user_tweets("handle", "mcurie")
-#pretty_print(user_recent)
 
 puts nT.tweet("Hello, world!")
+puts nT.reply("5acd33a131d664274e81485f", "It's a reply :D.")
+user_recent = nT.get_user_tweets("handle", "mcurie")
+pretty_print(user_recent)
