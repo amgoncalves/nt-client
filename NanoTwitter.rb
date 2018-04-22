@@ -32,6 +32,10 @@ class NanoTwitter
     @tweet.reply(id, msg)
   end
 
+  def retweet(id, msg)
+    @tweet.retweet(id, msg)
+  end
+
   def get_user(type, key)
     @user.find(type, key)
   end

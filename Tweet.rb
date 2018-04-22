@@ -81,4 +81,25 @@ class Tweet
 
     request.run 
   end
+
+  def retweet(id, msg)
+    request = Typhoeus::Request.new(
+      "#{@NT.base_uri}/api/v1/#{@NT.api_token}/tweets/#{id}/retweet",
+      method: :post,
+      params: { retweet: { content: msg } }
+    )
+    request.on_complete do |response|
+      if response.success?
+        if response.body == ""
+          return nil
+        else
+          return JSON.parse(response.body)
+        end
+      else
+        return nil
+      end
+    end
+
+    request.run 
+  end  
 end

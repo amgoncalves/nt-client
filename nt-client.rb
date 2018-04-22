@@ -31,7 +31,8 @@ end
 
 
 
-puts nT.tweet("Hello, world!")
-puts nT.reply("5acd33a131d664274e81485f", "It's a reply :D.")
-user_recent = nT.get_user_tweets("handle", "mcurie")
-pretty_print(user_recent)
+#puts nT.tweet("Hello, world!")
+#puts nT.reply("5acd33a131d664274e81485f", "It's a reply :D.")
+puts nT.retweet("5acd33a131d664274e81485f", "It's a retweet :D.")
+#user_recent = nT.get_user_tweets("handle", "mcurie")
+#pretty_print(user_recent)
