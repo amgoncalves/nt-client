@@ -33,12 +33,6 @@ POST "/api/v1/:apitoken/search/:key/tweets"
 
 ```
 
-TODO:
-
-```
-POST "/api/v1/:apitoken/users/:key/update"
-```
-
 ## Authors
 
 Si Chen, Alyssa Goncalves, Shuai Yu
